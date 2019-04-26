@@ -13,12 +13,25 @@ namespace WordCount.Tests
     public void CountWords_Test()
     {
       // Arrange
-      Word newWord = new Word("cat","cat,dog");
+      Word newWord = new Word("cat","catthedral Cat dog");
 
       //Act
       int result = newWord.CountWords();
       //Assert
-      Assert.AreEqual(result, 2);
+      Assert.AreEqual(result, 1);
+    }
+
+    [TestMethod]
+
+    public void IsValidInput_Test()
+    {
+      //Arrange
+      Word newWord = new Word("cat", "cat dog");
+
+      // Act
+      bool result = newWord.IsValidInput();
+      // Assert
+      Assert.AreEqual(result, true);
     }
   }
 }
