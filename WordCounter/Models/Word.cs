@@ -12,7 +12,7 @@ namespace WordCount.Models
 
     public Word (string userWord, string userSentence)
     {
-      _userWord = userWord;
+      _userWord = userWord.ToLower();
       _userSentence = userSentence.ToLower();
     }
 
@@ -36,6 +36,7 @@ namespace WordCount.Models
     public string IsValidInput()
     {
       char [] letters = _userWord.ToCharArray();
+      string[] newStting = _userSentence.Split(' ');
       for (int i =0; i<letters.Length; i++)
       {
       if (letters[i] < 'a' || letters[i] > 'z')
