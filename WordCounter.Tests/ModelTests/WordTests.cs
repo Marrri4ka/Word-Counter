@@ -18,7 +18,7 @@ namespace WordCount.Tests
       //Act
       int result = newWord.CountWords();
       //Assert
-      Assert.AreEqual(result,7);
+      Assert.AreEqual(result, 2);
     }
   }
 }

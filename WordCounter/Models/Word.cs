@@ -18,7 +18,18 @@ namespace WordCount.Models
 
     public int CountWords()
     {
-      return 5;
+      int result = 0;
+      string[] newSentence = _userSentence.Split(' ');
+
+      for (int i = 0; i< newSentence.Length; i++)
+      {
+        if(_userWord == newSentence[i])
+        {
+          result +=1;
+        }
+      }
+
+      return result;
     }
 
   }
