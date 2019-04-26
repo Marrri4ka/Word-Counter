@@ -36,7 +36,22 @@ namespace WordCount.Models
     public string IsValidInput()
     {
       char [] letters = _userWord.ToCharArray();
-      string[] newStting = _userSentence.Split(' ');
+      string[] newString = _userSentence.Split(' ');
+      bool hasWord = false;
+      for(int j = 0; j< newString.Length; j++)
+      {
+        if (newString[j].Length >= 1)
+        {
+        hasWord = true;
+        }
+      }
+
+      if (hasWord == false)
+      {
+       return "Please enter at least one word!";
+      }
+
+
       for (int i =0; i<letters.Length; i++)
       {
       if (letters[i] < 'a' || letters[i] > 'z')

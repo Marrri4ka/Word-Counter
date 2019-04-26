@@ -25,13 +25,15 @@ _To run this project,install it locally:_
 
 | Behavior       | Input          | Output  |
 | ------------- |:-------------:| -----:|
-|User enter two same words      | "cat" "cat cat"   | 2|
+|User enter two same words      | "cat" "cat cat"   |2|
 |User enter sentence of two different words | "cat" "cat dog"    |  1 |
 | User enter sentence of three words, where tow words are the same   | "cat" "cat dog cat"   |   2 |
 |User enter sentence with word 'meercat' | "cat" "I am a meercat" | 0 |
 |User | "cat" "They will not pay for our relocation" | 0 |
-|User can use different punctuation| This is cat;not dog | 1 |
-|User can use lower or upper case| "cat" This is Cat;not dog | 1 |
+|User can use lower or upper case| "cat" This is Cat | 1 |
+|User can enter sentence with different punctuation| "cat" This is Cat;not dog | 1 |
+|User enter instead of word a number | "1" This is Cat;not dog | "please use only letters" |
+|User forgot to enter a sentence  | "1"  | "please enter at least one word" |
 
 
 
