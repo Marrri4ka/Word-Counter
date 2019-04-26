@@ -1,8 +1,8 @@
 # Word-Counter ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 #### A program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. , 04.26.2019
 
-#### By _**Mariia Stashuk**_
-[I'm an inline-style link](https://www.linkedin.com/in/mariia-stashuk-66754816a/)
+
+[#### By _**Mariia Stashuk**_](https://www.linkedin.com/in/mariia-stashuk-66754816a/)
 
 ## Description
 
