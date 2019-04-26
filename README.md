@@ -52,6 +52,7 @@ If you have any questions or problems, please contact Mariia (mariiapopovych@gma
 ### License
 
 *License under MIT*
+
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 Copyright (c) 2019 **_Mariia Stashuk_**
