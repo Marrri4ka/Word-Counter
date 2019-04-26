@@ -29,7 +29,6 @@ _To run this project,install it locally:_
 |User enter sentence of two different words | "cat" "cat dog"    |  1 |
 | User enter sentence of three words, where tow words are the same   | "cat" "cat dog cat"   |   2 |
 |User enter sentence with word 'meercat' | "cat" "I am a meercat" | 0 |
-|User | "cat" "They will not pay for our relocation" | 0 |
 |User can use lower or upper case| "cat" This is Cat | 1 |
 |User can enter sentence with different punctuation| "cat" This is Cat;not dog | 1 |
 |User enter instead of word a number | "1" This is Cat;not dog | "please use only letters" |
@@ -53,5 +52,6 @@ If you have any questions or problems, please contact Mariia (mariiapopovych@gma
 ### License
 
 *License under MIT*
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 Copyright (c) 2019 **_Mariia Stashuk_**

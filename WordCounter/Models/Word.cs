@@ -10,7 +10,7 @@ namespace WordCount.Models
     private string _userWord;
     private string _userSentence;
 
-    public Word (string userWord, string userSentence)
+    public Word (string userWord, string userSentence) // constructor
     {
       _userWord = userWord.ToLower();
       _userSentence = userSentence.ToLower();
@@ -36,22 +36,6 @@ namespace WordCount.Models
     public string IsValidInput()
     {
       char [] letters = _userWord.ToCharArray();
-      string[] newString = _userSentence.Split(' ');
-      bool hasWord = false;
-      for(int j = 0; j< newString.Length; j++)
-      {
-        if (newString[j].Length >= 1)
-        {
-        hasWord = true;
-        }
-      }
-
-      if (hasWord == false)
-      {
-       return "Please enter at least one word!";
-      }
-
-
       for (int i =0; i<letters.Length; i++)
       {
       if (letters[i] < 'a' || letters[i] > 'z')
