@@ -33,16 +33,17 @@ namespace WordCount.Models
     }
 
 
-    public bool IsValidInput()
+    public string IsValidInput()
     {
-      if (_userSentence == "A")
+      char [] letters = _userWord.ToCharArray();
+      for (int i =0; i<letters.Length; i++)
       {
-        return true;
-      }
-    else
+      if (letters[i] < 'a' || letters[i] > 'z')
     {
-      return false;
+      return "Only letters please";
     }
   }
+  return "";
+}
 }
 }

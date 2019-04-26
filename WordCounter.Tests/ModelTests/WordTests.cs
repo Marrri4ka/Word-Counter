@@ -26,12 +26,12 @@ namespace WordCount.Tests
     public void IsValidInput_Test()
     {
       //Arrange
-      Word newWord = new Word("cat", "cat dog");
+      Word newWord = new Word("6", "cat dog");
 
       // Act
-      bool result = newWord.IsValidInput();
+      string result = newWord.IsValidInput();
       // Assert
-      Assert.AreEqual(result, true);
+      Assert.AreEqual(result,  "Only letters please");
     }
   }
 }
