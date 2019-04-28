@@ -1,15 +1,13 @@
 # Word-Counter ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 #### A program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. , 04.26.2019
 
-#### By _**Mariia Stashuk**_
+
+[ By _**Mariia Stashuk**_](https://www.linkedin.com/in/mariia-stashuk-66754816a/)
 
 ## Description
 
 A program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. It should check for full word matches only. (For instance, if provided the word "cat" and sentence "I'm walking to the cathedral." the first three letters of the word cathedral would not be counted.)
 
-*
-*
-*
 
 
 ## Setup/Installation Requirements
@@ -47,11 +45,13 @@ If you have any questions or problems, please contact Mariia (mariiapopovych@gma
 ## Technologies Used
 
 * C#
+* .NET
 
 
 ### License
 
 *License under MIT*
+
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 Copyright (c) 2019 **_Mariia Stashuk_**
