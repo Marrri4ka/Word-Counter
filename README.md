@@ -45,6 +45,7 @@ If you have any questions or problems, please contact Mariia (mariiapopovych@gma
 ## Technologies Used
 
 * C#
+* .NET
 
 
 ### License
