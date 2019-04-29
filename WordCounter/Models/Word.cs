@@ -19,7 +19,7 @@ namespace WordCount.Models
     public int CountWords()
     {
       int result = 0;
-      string[] newSentence = _userSentence.Split(' ');
+      string[] newSentence = _userSentence.Split(' ', ',','!',':',';');
 
       for (int i = 0; i< newSentence.Length; i++)
       {
