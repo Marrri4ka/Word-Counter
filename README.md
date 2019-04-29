@@ -14,10 +14,15 @@ A program that gathers both a word and sentence from a user, then checks how fre
 
 _To run this project,install it locally:_
 
+
+* Download .NET Core 2.1.3 SDK and .NET Core Runtime 2.0.9 and install them. Download Mono and Install it.
 * Clone this repository https://github.com/Marrri4ka/Word-Counter.git
+* Open the project in your preferred text editor to modify the files.
+* To run the program, navigate to WordCounter.Solution/WordCounter and use $dotnet build &&  $dotnet run 
+* Navigate to localhost:5000 
 
 
-## Beep Boop Specifications
+## Word Counter Specifications
 
  List of specs from the simplest possible behavior to the most complex behavior:
 
