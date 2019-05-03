@@ -16,6 +16,26 @@ namespace WordCounter.Models
       _userSentence = userSentence.ToLower();
     }
 
+    public string GetUserWord()
+    {
+      return _userWord;
+    }
+
+    public void SetUserWord(string newUserWord)
+    {
+      _userWord = newUserWord;
+    }
+
+    public string GetUserSentence()
+    {
+      return _userSentence;
+    }
+
+    public void SetUserSentence(string newUserSentence)
+    {
+      _userSentence= newUserSentence;
+    }
+
     public int CountWords()
     {
       int result = 0;

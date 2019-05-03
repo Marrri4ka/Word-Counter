@@ -4,15 +4,25 @@
   <div class="jumbotron">
 <center><h1>Let's play</h1></center>
   </div>
-    <form action="/categories" method="post">
-      <label for="categoryName">Enter your word</label>
-      <input id="categoryName" name="categoryName" type="text"> <button id="button" type="submit">Add</button><br>
+
+
+  @if (@Model == null)
+  {
+
+  }
+  else{
+  <p>Your word @Model.GetUserWord() appears  @Model.CountWords() times in @Model.GetUserSentence()</p>
+  }
+    <form action="/wordgame" method="post">
+      <label for="userWord">Enter your word</label>
+      <input id="userWord" name="userWord" type="text">
+      <label for="userSentence">Enter your sentence</label>
+      <input id="userSentence" name="userSentence" type="text"><br>
+      <button id="button" type="submit">Play</button>
     </form>
 
-    <form action="/categories" method="post">
-      <label for="categoryName">Enter your sentence</label>
-      <input id="categoryName" name="categoryName" type="text"> <button id="button" type="submit">Add</button><br>
-    </form>
+
+
     <a class="card-link" href="/">Play</a>
     <a class="card-link" href="/categories">Back to categories</a>
   </div>
