@@ -1,8 +1,8 @@
-
-using System;
 using System.Collections.Generic;
 
-namespace WordCount.Models
+using System;
+
+namespace WordCounter.Models
 {
   public class Word // class
   {
