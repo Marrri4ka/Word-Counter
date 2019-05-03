@@ -9,6 +9,7 @@ namespace WordCounter.Controllers
     [HttpGet("/wordgame")]
         public ActionResult Game()
         {
+          List<Word> allwords = Word.GetAll();
           return View();
         }
 
@@ -17,9 +18,10 @@ namespace WordCounter.Controllers
         public ActionResult Game(string userWord, string userSentence)
         {
           Word newWord = new Word(userWord,userSentence);
+          List<Word> allwords = Word.GetAll();
           newWord.CountWords();
 
-          return View("Game",newWord);
+          return View("Game",allwords);
         }
 
   }

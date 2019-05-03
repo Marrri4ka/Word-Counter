@@ -2,9 +2,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using WordCount.Models;
+using WordCounter.Models;
 
-namespace WordCount.Tests
+namespace WordCounter.Tests
 {
   [TestClass]
   public class WordTest
