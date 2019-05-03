@@ -10,8 +10,13 @@
   {
 
   }
-  else{
+  else if (@Model.IsValidInput() == "")
+  {
   <p>Your word @Model.GetUserWord() appears  @Model.CountWords() times in @Model.GetUserSentence()</p>
+  }
+  else
+  {
+  <p>please enter only numbers!</p>
   }
     <form action="/wordgame" method="post">
       <label for="userWord">Enter your word</label>
