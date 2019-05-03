@@ -10,7 +10,7 @@ namespace WordCounter.Controllers
         public ActionResult Game()
         {
           List<Word> allwords = Word.GetAll();
-          return View();
+          return View(allwords);
         }
 
 

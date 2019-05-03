@@ -1,36 +1,69 @@
 <html>
+
 <body>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-  <div class="jumbotron">
-<center><h1>Let's play</h1></center>
-  </div>
+  <div class="container">
 
 
-  @if (@Model == null)
-  {
+    <div class="jumbotron">
+      <center>
+        <h1>Let's play</h1>
+      </center>
+    </div>
 
-  }
-  else if (@Model.IsValidInput() == "")
-  {
-  <p>Your word @Model.GetUserWord() appears  @Model.CountWords() times in @Model.GetUserSentence()</p>
-  }
-  else
-  {
-  <p>Please enter only letters!</p>
-  }
+
+
+    @if (@Model.Count == 0)
+    {
+
+    }
+
+    @foreach (var word in Model)
+    {
+
+    <h3><a href='/wordgame/@word.GetId()'>@word.GetUserWord()<br>@word.GetUserSentence()</a><br></h3>
+
+
+
+    @if (@word == null)
+    {
+
+    }
+    else if (@word.IsValidInput() == "")
+    {
+    <p>Your word @word.GetUserWord() appears @word.CountWords() times in @word.GetUserSentence()</p>
+    <div class="row">
+      <button type="button" class="btn btn-danger btn-sm"><a href='/wordgame/@word.GetId()/delete'>Delete</a></button>
+      <button type="button" class="btn btn-warning btn-sm"><a href='/wordgame/new'>New category</a></button>
+      <button type="button" class="btn btn-success btn-sm"><a href='/'>Back home</a></button>
+    </div>
+    }
+    else
+    {
+    <p>Please enter only letters!</p>
+    }
+    }
+
+
+
+
+
+
     <form action="/wordgame" method="post">
       <label for="userWord">Enter your word</label>
-      <input id="userWord" name="userWord" type="text">
+      <input id="userWord" name="userWord" type="text"><br>
       <label for="userSentence">Enter your sentence</label>
       <input id="userSentence" name="userSentence" type="text"><br>
-      <button id="button" type="submit">Play</button>
+      <button class="btn btn-danger" id="button" type="submit">Play</button>
     </form>
 
 
 
-    <a class="card-link" href="/">Play</a>
-    <a class="card-link" href="/categories">Back to categories</a>
+    <a class="card-link" href="/">Home</a>
+
   </div>
-</div>
+  </div>
+  </div>
 </body>
+
 </html>

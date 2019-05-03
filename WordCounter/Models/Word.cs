@@ -50,6 +50,11 @@ namespace WordCounter.Models
       return _userWord;
     }
 
+    public int GetId()
+    {
+      return _id;
+    }
+
     public void SetUserWord(string newUserWord)
     {
       _userWord = newUserWord;
