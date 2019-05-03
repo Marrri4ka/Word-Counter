@@ -1,30 +1,21 @@
-using System;
-using System.Collections.Generic;
 
-namespace WordCount.Models
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+
+namespace WordCounter
 {
   public class Program
   {
-    public static void Main()
+    public static void Main(string[] args)
     {
-      Console.WriteLine("Please enter your word");
-      string myWord = Console.ReadLine();
+      var host = new WebHostBuilder()
+        .UseKestrel()
+        .UseContentRoot(Directory.GetCurrentDirectory())
+        .UseIISIntegration()
+        .UseStartup<Startup>()
+        .Build();
 
-
-      Console.WriteLine("Please enter your sentence");
-      string mySentence = Console.ReadLine();
-      Word newWord = new Word(myWord,mySentence);
-      string checkWord = newWord.IsValidInput();
-
-
-      if (checkWord != "")
-      {
-        Console.WriteLine ("Please use only letters");
-      }
-      else
-      {
-      Console.WriteLine("Your result is " + newWord.CountWords());
-    }
+      host.Run();
     }
   }
 }
