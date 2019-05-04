@@ -42,6 +42,16 @@ namespace WordCounter.Controllers
                   List<Word> allwords = Word.GetAll();
               return View("New",allwords);
 
-}
+          }
+
+          [HttpPost("/wordgame/deleteall")]
+            public ActionResult DeleteAll()
+
+            {
+              Word.ClearAll();
+              List<Word> allwords = Word.GetAll();
+                return View("New",allwords);
+
+            }
   }
 }
