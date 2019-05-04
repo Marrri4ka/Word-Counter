@@ -1,52 +1,63 @@
 <html>
+
 <body>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <div class="jumbotron">
 
-      @if (@Model.Count == 0)
-      {
+    @if (@Model.Count == 0)
+    {
 
-      }
+    }
 
-      @foreach (var word in Model)
-      {
+    @foreach (var word in Model)
+    {
 
 
-      @if (@word == null)
-      {
+    @if (@word == null)
+    {
 
-      }
-      else if (@word.IsValidInput() == "")
-      {
+    }
+    else if (@word.IsValidInput() == "")
+    {
 
-      <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          @word.GetUserWord()
-          <span class="badge badge-primary badge-pill"></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          @word.GetUserSentence()
-          <span class="badge badge-primary badge-pill"></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Word appears in sentence
-          <span class="badge badge-primary badge-pill">@word.CountWords()</span>
-        </li>
-      </ul><br>
-      <div class="row">
-        <button type="button" class="btn btn-light btn-sm"><a href='/wordgame/@word.GetId()/delete'>Delete</a></button>
-        <button type="button" class="btn btn-light btn-sm"><a href='/wordgame'>New game</a></button>
-        <button type="button" class="btn btn-light btn-sm"><a href='/'>Back home</a></button>
-      </div>
-      <br>
-      }
-      else
-      {
-      <p>Please enter only letters!</p>
-      }
-      }
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <strong>Your word: </strong> @word.GetUserWord()
+        <span class="badge badge-primary badge-pill"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <strong>Your sentence: </strong> @word.GetUserSentence()
+        <span class="badge badge-primary badge-pill"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <strong>Result: </strong> Word appears in sentence
+        <span class="badge badge-primary badge-pill">@word.CountWords()</span>
+      </li>
+    </ul><br>
+    <div class="row">
+      <form action="/wordgame/@word.GetId()/delete" method="post">
+        <button type="submit" class="btn btn-light btn-sm">Delete</button>
+      </form>
+      <button type="button" class="btn btn-light btn-sm"><a href='/wordgame'>New game</a></button>
 
+    </div>
+    <br>
+    }
+    else
+    {
+    <p>Please enter only letters!</p>
+    }
+    }
+
+
+    <form action="/categories/deleteall" method="post">
+      <button type="submit" class="btn btn-danger">Clear all</button>
+      <button type="button" class="btn btn-light"><a href='/'>Back home</a></button>
+      <button type="button" class="btn btn-light btn-sm"><a href='/wordgame'>New game</a></button>
+
+    </form>
 
 
 </body>
+
 </html

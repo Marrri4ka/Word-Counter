@@ -17,6 +17,7 @@ namespace WordCounter.Models
       _userWord = userWord.ToLower();
       _userSentence = userSentence.ToLower();
       _allresults.Add(this);
+      _id = _allresults.Count;
     }
 
     public static void ClearAll()
@@ -34,16 +35,16 @@ namespace WordCounter.Models
       return _allresults[id-1];
     }
 
-    // public void Delete()
-    // {
-    //   for (int i=0; i<_allresults.Count; i++)
-    //   {
-    //     if(_allresults[i].GetId() == _id)
-    //     {
-    //       _allresults.Remove(_allresults[i]);
-    //     }
-    //   }
-    // }
+    public void Delete()
+    {
+      for (int i=0; i<_allresults.Count; i++)
+      {
+        if(_allresults[i].GetId() == _id)
+        {
+          _allresults.Remove(_allresults[i]);
+        }
+      }
+    }
 
     public string GetUserWord()
     {
@@ -99,5 +100,7 @@ namespace WordCounter.Models
   }
   return "";
 }
+
+
 }
 }

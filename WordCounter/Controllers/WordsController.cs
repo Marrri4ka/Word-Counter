@@ -24,5 +24,24 @@ namespace WordCounter.Controllers
           return View("New",allwords);
         }
 
+        // [HttpGet("/wordgame/dleteall")]
+        //     public ActionResult GameMy()
+        //     {
+        //       List<Word> allwords = Word.GetAll();
+        //       allwords.ClearAll();
+        //       return View(allwords);
+        //     }
+
+        [HttpPost("/wordgame/{wordgameId}/delete")]
+          public ActionResult Delete(int wordgameId)
+
+          {
+
+            Word newWord = Word.Find(wordgameId);
+            newWord.Delete();
+                  List<Word> allwords = Word.GetAll();
+              return View("New",allwords);
+
+}
   }
 }
