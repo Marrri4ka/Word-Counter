@@ -1,5 +1,5 @@
 # Word-Counter ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-#### A program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. , 04.26.2019
+#### A program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. , 05.05.2019
 
 
 [ By _**Mariia Stashuk**_](https://www.linkedin.com/in/mariia-stashuk-66754816a/)
@@ -18,8 +18,8 @@ _To run this project,install it locally:_
 * Download .NET Core 2.1.3 SDK and .NET Core Runtime 2.0.9 and install them. Download Mono and Install it.
 * Clone this repository https://github.com/Marrri4ka/Word-Counter.git
 * Open the project in your preferred text editor to modify the files.
-* To run the program, navigate to WordCounter.Solution/WordCounter and use $dotnet build &&  $dotnet run 
-* Navigate to localhost:5000 
+* To run the program, navigate to WordCounter.Solution/WordCounter and use $dotnet build &&  $dotnet run
+* Navigate to localhost:5000
 
 
 ## Word Counter Specifications
@@ -37,6 +37,10 @@ _To run this project,install it locally:_
 |User enter instead of word a number | "1" This is Cat;not dog | "please use only letters" |
 |User forgot to enter a sentence  | "1"  | "please enter at least one word" |
 
+## Description
+![Alt text](/img1/screen1.png)
+![Alt text](/img1/screen2.png)
+![Alt text](/img1/screen3.png)
 
 
 ## Known Bugs

@@ -12,17 +12,29 @@ Layout = "~/Views/Shared/_Layout.cshtml";
     </center>
   </div>
 
-  <form action="/wordgame/new" method="post">
-    <label for="userWord">Enter your word</label>
-    <input id="userWord" name="userWord" type="text" required><br>
-    <label for="userSentence">Enter your sentence</label>
-    <input id="userSentence" name="userSentence" type="text" required><br>
-    <button class="btn btn-danger" id="button" type="submit">Play</button>
 
-    <button class="btn btn-light"><a class="card-link" href="/">Home</a></button>
+
+
+
+
+  <center><div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+  <form action="/wordgame/new" method="post">
+    <label for="userWord"><strong>Enter your word</strong></label>
+    <input id="userWord" name="userWord" type="text" required><br>
+    <label for="userSentence"><strong>Enter your sentence</strong></label>
+    <input id="userSentence" name="userSentence" type="text" required><br>
+    <li class="list-group-item">  <button class="btn btn-danger" id="button" type="submit">Play</button>
+      <button class="btn btn-light"><a class="card-link" href="/">Home</a></button>
+    </li>
+
+
+
 
   </form>
-
+    </ul>
+</div>
+</center>
 
 
 </div>

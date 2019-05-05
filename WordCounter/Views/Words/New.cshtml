@@ -20,27 +20,61 @@
     else if (@word.IsValidInput() == "")
     {
 
-    <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <strong>Your word: </strong> @word.GetUserWord()
-        <span class="badge badge-primary badge-pill"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <strong>Your sentence: </strong> @word.GetUserSentence()
-        <span class="badge badge-primary badge-pill"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <strong>Result: </strong> Word appears in sentence
-        <span class="badge badge-primary badge-pill">@word.CountWords()</span>
-      </li>
-    </ul><br>
-    <div class="row">
-      <form action="/wordgame/@word.GetId()/delete" method="post">
-        <button type="submit" class="btn btn-light btn-sm">Delete</button>
-      </form>
-      <button type="button" class="btn btn-light btn-sm"><a href='/wordgame'>New game</a></button>
 
+    <!-- Card -->
+    <div class="card" style="width: 18rem;">
+      <!-- Card image -->
+      <div class="view overlay">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo9.jpg" alt="Card image cap">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!-- Social buttons -->
+      <div class="card-share">
+
+        <div class="social-reveal">
+
+          <!-- Facebook -->
+          <a type="button" class="btn-floating btn-fb mt-0 mx-1"><i class="fab fa-facebook-f"></i></a>
+          <!-- Twitter -->
+          <a type="button" class="btn-floating btn-tw mt-0 mx-1"><i class="fab fa-twitter"></i></a>
+          <!-- Google -->
+          <a type="button" class="btn-floating btn-gplus mt-0 mx-1"><i class="fab fa-google-plus-g"></i></a>
+
+        </div>
+
+        <!-- Button action -->
+        <a class="btn-floating btn-action share-toggle indigo ml-auto mr-4 float-right"><i class="fas fa-share-alt"></i></a>
+
+      </div>
+
+      <!-- Card content -->
+      <div class="card-body">
+
+        <!-- Title -->
+        <h4 class="card-title">Result: @word.CountWords() </h4>
+        <hr>
+        <!-- Text -->
+        <p class="card-text">Word <strong> @word.GetUserWord()</strong> appears <strong>@word.CountWords()</strong> times in sentence <strong>@word.GetUserSentence()</strong></p>
+        <button class="btn btn-indigo btn-rounded btn-md">
+          <form action="/wordgame/@word.GetId()/delete" method="post">
+            <button type="submit" class="btn btn-info btn-sm">Delete</button>
+          </form>
+        </button>
+        <button class="btn btn-indigo btn-rounded btn-md">
+          <button type="button" class="btn btn-light btn-sm"><a href='/wordgame'>New game</a></button>
+        </button>
+
+      </div>
     </div>
+    <!-- Card -->
+
+
+
+
+
     <br>
     }
     else
