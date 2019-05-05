@@ -1,40 +1,30 @@
-<html>
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<body>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-  <div class="container">
-
-
-    <div class="jumbotron">
-      <center>
-        <h1>Let's play</h1>
-      </center>
-    </div>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<div class="container">
 
 
-
-
-
-
-
-
-
-    <form action="/wordgame/new" method="post">
-      <label for="userWord">Enter your word</label>
-      <input id="userWord" name="userWord" type="text" required><br>
-      <label for="userSentence">Enter your sentence</label>
-      <input id="userSentence" name="userSentence" type="text" required><br>
-      <button class="btn btn-danger" id="button" type="submit">Play</button>
-
-      <button class="btn btn-light"><a class="card-link" href="/">Home</a></button>
-
-    </form>
-
-
-
+  <div class="jumbotron">
+    <center>
+      <h1>Let's play</h1>
+    </center>
   </div>
-  </div>
-  </div>
-</body>
 
-</html>
+  <form action="/wordgame/new" method="post">
+    <label for="userWord">Enter your word</label>
+    <input id="userWord" name="userWord" type="text" required><br>
+    <label for="userSentence">Enter your sentence</label>
+    <input id="userSentence" name="userSentence" type="text" required><br>
+    <button class="btn btn-danger" id="button" type="submit">Play</button>
+
+    <button class="btn btn-light"><a class="card-link" href="/">Home</a></button>
+
+  </form>
+
+
+
+</div>
+</div>
+</div>
