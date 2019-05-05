@@ -95,7 +95,7 @@ namespace WordCounter.Models
       {
       if (letters[i] < 'a' || letters[i] > 'z')
     {
-      return "Only letters please";
+      return "Only letters please and make sure, that there are no spaces after your word!";
     }
   }
   return "";

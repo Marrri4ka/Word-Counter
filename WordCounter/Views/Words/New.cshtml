@@ -57,7 +57,7 @@
         <h4 class="card-title">Result: @word.CountWords() </h4>
         <hr>
         <!-- Text -->
-        <p class="card-text">Word <strong> @word.GetUserWord()</strong> appears <strong>@word.CountWords()</strong> times in sentence <strong>@word.GetUserSentence()</strong></p>
+        <p class="card-text">Word <strong> @word.GetUserWord()</strong> appears <strong>@word.CountWords()</strong> time(-s) in sentence <strong>@word.GetUserSentence()</strong></p>
         <button class="btn btn-indigo btn-rounded btn-md">
           <form action="/wordgame/@word.GetId()/delete" method="post">
             <button type="submit" class="btn btn-info btn-sm">Delete</button>
@@ -79,7 +79,7 @@
     }
     else
     {
-    <p>Please enter only letters!</p>
+    <p>Please enter only letters and make sure there are no spaces after the word you entered!</p>
     }
     }
 
